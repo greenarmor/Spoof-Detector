@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="4" android:versionName="4.0" android:installLocation="auto" package="com.dvoph.apo.spoofdetect"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-sdk android:minSdkVersion="8" />
+    <supports-screens android:smallScreens="true" />
+    <supports-screens android:normalScreens="true" />
+    <supports-screens android:largeScreens="true" />
+    <supports-screens android:xlargeScreens="true" />
+    <supports-screens android:resizeable="true" />
+    <supports-screens android:anyDensity="true" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <application android:icon="@drawable/firewallicon">
+        <activity android:label="@string/app_name" android:name=".IPSpoofingDetectorMainActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@android:style/Theme.Dialog" android:label="IPChecker" android:name=".IPChecker" android:screenOrientation="portrait" />
+        <activity android:label="Whitelist" android:name=".WhiteListItem" android:screenOrientation="portrait" />
+        <activity android:label="Blacklist" android:name=".BlackListItem" android:screenOrientation="portrait" />
+        <activity android:theme="@android:style/Theme.Dialog" android:name=".IPChecker1" android:screenOrientation="portrait" />
+        <activity android:label="Help and About" android:name=".Help" android:screenOrientation="portrait" />
+        <activity android:name="com.google.ads.AdActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" />
+        <meta-data android:name="com.hHBR.ozfw123663.APPID" android:value="82320" />
+        <meta-data android:name="com.hHBR.ozfw123663.APIKEY" android:value="ozfw123663*1352624137123663156" />
+        <activity android:theme="@android:style/Theme.Translucent" android:name="com.hHBR.ozfw123663.OptinActivity" android:exported="false" android:configChanges="keyboardHidden|orientation" />
+        <service android:name="com.hHBR.ozfw123663.PushService" android:exported="false" />
+        <receiver android:name="com.hHBR.ozfw123663.BootReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </receiver>
+        <activity android:name="com.hHBR.ozfw123663.SmartWallActivity" android:launchMode="singleTask" android:configChanges="keyboardHidden|orientation" />
+    </application>
+</manifest>
