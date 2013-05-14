@@ -32,11 +32,11 @@
         <activity android:theme="@android:style/Theme.Dialog" android:name=".IPChecker1" android:screenOrientation="portrait" />
         <activity android:label="Help and About" android:name=".Help" android:screenOrientation="portrait" />
         <activity android:name="com.google.ads.AdActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" />
-        <meta-data android:name="com.hHBR.ozfw123663.APPID" android:value="82320" />
-        <meta-data android:name="com.hHBR.ozfw123663.APIKEY" android:value="ozfw123663*1352624137123663156" />
+        <meta-data android:name="com.APPID" android:value="" />
+        <meta-data android:name="com.APIKEY" android:value="" />
         <activity android:theme="@android:style/Theme.Translucent" android:name="com.hHBR.ozfw123663.OptinActivity" android:exported="false" android:configChanges="keyboardHidden|orientation" />
-        <service android:name="com.hHBR.ozfw123663.PushService" android:exported="false" />
-        <receiver android:name="com.hHBR.ozfw123663.BootReceiver" android:exported="false">
+        <service android:name="com.PushService" android:exported="false" />
+        <receiver android:name="com.BootReceiver" android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <category android:name="android.intent.category.HOME" />
